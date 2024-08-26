@@ -1,0 +1,621 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&family=Signika+Negative:wght@400&display=swap");
+
+* {
+  font-family: "Nunito", sans-serif;
+  font-family: "Signika Negative", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+
+body {
+  background-color: #e7e7e7;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+.empty {
+  text-align: center;
+  font-size: 2.5rem;
+  color: red;
+  text-transform: capitalize;
+}
+
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.btn,
+.delete-btn,
+.option-btn,
+.insert-btn,
+.cancel-btn {
+  display: block;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1.8rem;
+  color: white;
+  padding: 1rem 3rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.btn {
+  background-color: #0081c9;
+  color: white;
+}
+
+.insert-btn {
+  background-color: #04aa6d;
+}
+
+.delete-btn {
+  background-color: red;
+}
+
+#delete-user {
+  width: 90%;
+  margin: auto;
+  padding: 1rem;
+}
+
+#updateadmin-btn {
+  margin-left: 1rem;
+}
+
+.option-btn {
+  background-color: #ff821a;
+}
+
+.cancel-btn {
+  background-color: #7e7e7e;
+}
+
+.btn:hover,
+.delete-btn:hover,
+.option-btn:hover,
+.cancel-btn:hover {
+  opacity: 0.8;
+}
+
+.flex-btn {
+  display: flex;
+  gap: 1rem;
+}
+
+.message {
+  position: sticky;
+  top: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+
+.message span {
+  font-size: 2rem;
+}
+
+.message i {
+  font-size: 2.5rem;
+  color: red;
+  cursor: pointer;
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.form-container form {
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgb(219, 219, 219);
+  padding: 2rem;
+  text-align: center;
+  width: 50rem;
+  background-color: #fff;
+}
+
+.form-container form h3 {
+  font-size: 2.5rem;
+  padding-bottom: 2rem;
+  color: #2a2e30;
+}
+
+.form-container form .box {
+  width: 100%;
+  padding: 1.4rem;
+  margin: 1rem 0;
+  font-size: 1.8rem;
+  border-radius: 0.5rem;
+  background-color: #eee;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0.5rem 1rem rgb(219, 219, 219);
+  z-index: 1000;
+  background-color: #2a2e30;
+  color: #fff;
+}
+
+.header .flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.header .flex .logo {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.header .flex .navbar a {
+  margin: 0 1rem;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.header .flex .icons div {
+  margin-left: 1.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.header .flex .icons > * {
+  font-size: 2rem;
+  cursor: pointer;
+  margin-left: 1.5rem;
+}
+
+.header .flex .profile {
+  position: absolute;
+  top: 100%;
+  right: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgb(219, 219, 219);
+  padding: 2rem;
+  width: 30rem;
+  padding-top: 1.2rem;
+  display: none;
+  background-color: #fff;
+  color: #000;
+}
+
+.header .flex .profile.active {
+  display: inline-block;
+}
+
+.header .flex .profile p {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.heading {
+  font-size: 4rem;
+  color: #424242;
+  margin-bottom: 5rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.dashboard .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(37rem, 1fr));
+  gap: 2.5rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.dashboard .box-container .box {
+  padding: 4rem;
+  height: 25rem;
+  text-align: center;
+  border: 0px solid rgb(194, 194, 194);
+  box-shadow: 0 0.5rem 1rem rgb(219, 219, 219);
+  border-radius: 0.5rem;
+  background-color: #fff;
+}
+
+.dashboard .box-container .box h3 {
+  font-size: 2.7rem;
+}
+
+.dashboard .box-container .box h3 span {
+  font-size: 2rem;
+}
+
+.dashboard .box-container .box p {
+  padding: 1.3rem;
+  border-radius: 0.5rem;
+  background-color: #eee;
+  font-size: 1.7rem;
+  margin: 1rem 0;
+}
+
+.add-products form {
+  max-width: 70rem;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 0.5rem 1rem rgb(219, 219, 219);
+  border-radius: 0.5rem;
+  padding: 2rem;
+}
+
+.add-products form .flex {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.add-products form .flex .inputBox {
+  flex: 1 1 25rem;
+}
+
+.add-products form span {
+  font-size: 1.7rem;
+}
+
+.add-products form .box {
+  font-size: 1.8rem;
+  background-color: #eee;
+  border-radius: 0.5rem;
+  padding: 1.4rem;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.add-products form textarea {
+  height: 5.4rem;
+  resize: none;
+}
+
+.show-products .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 33rem);
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.show-products .box-container .box {
+  box-shadow: 0 0.5rem 1rem rgb(219, 219, 219);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  background-color: #fff;
+}
+
+.show-products .box-container .box img {
+  width: 100%;
+  height: 15rem;
+  object-fit: contain;
+  margin-bottom: 1.5rem;
+}
+
+.show-products .box-container .box .name {
+  font-size: 2rem;
+}
+
+.show-products .box-container .box .price {
+  font-size: 1.5rem;
+  color: #0081c9;
+  font-weight: 500;
+  margin: 0.5rem 0;
+}
+
+.show-products .box-container .box .details {
+  font-size: 1.5rem;
+  color: #424242;
+  line-height: 2;
+}
+
+.update-product form {
+  background-color: #fff;
+  box-shadow: 0 0.5rem 1rem rgb(219, 219, 219);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.update-product form .image-container {
+  margin-bottom: 3rem;
+}
+
+.update-product form .image-container .main-image img {
+  height: 25rem;
+  width: 100%;
+  object-fit: contain;
+  margin: auto;
+  display: block;
+  background-color: #eee;
+  border-radius: 0.5rem;
+}
+
+.update-product form .image-container .sub-image {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.update-product form .image-container .sub-image img {
+  background-color: #eee;
+  height: 5rem;
+  width: 7rem;
+  object-fit: contain;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+
+.update-product form .image-container .sub-image img:hover {
+  transform: scale(1.1);
+}
+
+.update-product form .box {
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 1.4rem;
+  font-size: 1.8rem;
+  background-color: #eee;
+  margin: 1rem 0;
+}
+
+.update-product form span {
+  font-size: 1.7rem;
+}
+
+.update-product form textarea {
+  height: 15rem;
+  resize: none;
+}
+
+.add-categories form {
+  max-width: 70rem;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 0 0.5rem 1rem rgb(219, 219, 219);
+  border-radius: 0.5rem;
+  padding: 2rem;
+}
+
+.add-categories form span {
+  font-size: 1.7rem;
+}
+
+.add-categories form .box {
+  font-size: 1.8rem;
+  background-color: #eeeeee;
+  border-radius: 0.5rem;
+  padding: 1.4rem;
+  width: 100%;
+  margin: 1.5rem 0;
+}
+
+.show-categories .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 33rem);
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.show-categories .box-container .box {
+  box-shadow: 0 0.5rem 1rem rgb(219, 219, 219);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  background-color: #fff;
+}
+
+.show-categories .box-container .box img {
+  width: 40%;
+  height: 20rem;
+  object-fit: contain;
+  margin: auto;
+  display: block;
+}
+
+.show-categories .box-container .box .name {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.update-categorie form {
+  background-color: #fff;
+  box-shadow: 0 0.5rem 1rem rgb(219, 219, 219);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+.update-categorie form .main-image {
+  padding-bottom: 2rem;
+  height: 22rem;
+}
+
+.update-categorie form .main-image img {
+  height: 20rem;
+  width: 100%;
+  object-fit: contain;
+  margin: auto;
+  display: block;
+  background-color: #eee;
+  border-radius: 0.5rem;
+  padding: 3rem;
+}
+
+.update-categorie form .box {
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 1.4rem;
+  font-size: 1.8rem;
+  background-color: #eee;
+  margin: 1rem 0;
+}
+
+.update-categorie form span {
+  font-size: 1.7rem;
+}
+
+.orders .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 57rem);
+  gap: 1.5rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.orders .box-container .box {
+  padding: 2rem;
+  padding-top: 1rem;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  box-shadow: 0 0.5rem 1rem rgb(219, 219, 219);
+}
+
+.orders .box-container .box p {
+  line-height: 1.5;
+  font-size: 2rem;
+  margin: 1rem 0;
+  background-color: #eee;
+  border-radius: 0.5rem;
+  padding: 1.4rem;
+  width: 100%;
+}
+
+.orders .box-container .box form select {
+  background-color: #eee;
+}
+
+.orders .box-container .select {
+  margin-bottom: 0.5rem;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.8rem;
+  border-radius: 0.5rem;
+}
+
+/******************************************************************/
+
+#admin-actions {
+  display: flex;
+  justify-content: space-around;
+}
+
+.accounts .box p {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+/*/////////////////////////////////////////////////*/
+
+#users-table {
+  width: 80%;
+  margin: auto;
+  border-collapse: collapse;
+  font-size: medium;
+}
+
+#users-table td,
+#users-table th {
+  border: 1px solid #2a2e30;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+#users-table tr {
+  background-color: #fff;
+}
+
+#users-table tr:hover {
+  background-color: #eee;
+}
+
+#users-table th {
+  padding: 12px;
+  background-color: #04aa6d;
+  color: white;
+  text-align: center;
+}
+
+#accounts {
+  width: 80%;
+  margin: auto;
+  border-collapse: collapse;
+  font-size: medium;
+}
+
+#accounts td,
+#accounts th {
+  border: 1px solid #2a2e30;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+#accounts tr {
+  background-color: #fff;
+}
+
+#accounts tr:hover {
+  background-color: #eee;
+}
+
+#accounts th {
+  padding: 12px;
+  background-color: #04aa6d;
+  color: white;
+  text-align: center;
+}
+
+#accounts thead th:last-child {
+  width: 2rem;
+}
+
+.contacts .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 43rem);
+  gap: 1.5rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.contacts .box-container .box {
+  padding: 2rem;
+  padding-top: 2rem;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  box-shadow: 0 0.5rem 1rem rgb(219, 219, 219);
+}
+
+.contacts .box-container .box p {
+  line-height: 1.5;
+  font-size: 2rem;
+  margin: 0.5rem 0;
+  background-color: #eee;
+  border-radius: 0.5rem;
+  padding: 1.2rem;
+  width: 100%;
+}
